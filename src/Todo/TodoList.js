@@ -8,16 +8,15 @@ const styles = {
    padding: 0
  }
 }
-
-function TodoList(props) {
+function TodoList({ todos, onToggle }) {
   return (
    <ul style={styles.ul}>
-      {props.todos.map((todo,index) => {
+      {todos.map((todo,index) => {
         return <TodoItem 
         todo={todo} 
         key={todo.id} 
         index={index} 
-        onChange={props.onToggle}
+        onChange={onToggle}
         />
       })}
    </ul>
