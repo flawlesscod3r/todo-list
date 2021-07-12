@@ -11,14 +11,14 @@ const styles = {
 function TodoList({ todos, onToggle }) {
   return (
    <ul style={styles.ul}>
-      {todos.map((todo,index) => {
-        return <TodoItem 
+    {todos.map((todo,index) => (
+      <TodoItem
         todo={todo} 
         key={todo.id} 
         index={index} 
         onChange={onToggle}
-        />
-      })}
+      />
+    ))}
    </ul>
   )
 }
