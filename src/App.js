@@ -28,7 +28,7 @@ function App() {
     setTodos(todos.filter(todo => todo.id !== id))
   }
 
-  const OnCreateTodo = title => {
+  const onCreateTodo = title => {
     setTodos(
       todos.concat([
         {
@@ -44,7 +44,7 @@ function App() {
     <Context.Provider value={{ removeTodo }}>
       <div className='wrapper'>
         <h1>Задачи:</h1>
-        <AddTodo onCreate={OnCreateTodo} />
+        <AddTodo onCreate={onCreateTodo} />
         {todos.length ? (
           <TodoList todos={todos} onToggle={toggleTodo} />
         ) : (
