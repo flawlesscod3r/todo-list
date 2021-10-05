@@ -40,7 +40,7 @@ function TodoItem({ todo, onChange }) {
       </span>
 
       <button className='rm' type='button' onClick={() => removeTodo(todo.id)}>
-        &times
+        delete todo
       </button>
     </li>
   )
